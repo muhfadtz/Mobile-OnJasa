@@ -14,8 +14,8 @@
         android:text="Sign In"
         android:textSize="25dp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="41dp"
-        tools:layout_editor_absoluteY="51dp" />
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="55dp" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/textInputEditText2"
@@ -30,7 +30,8 @@
         android:layout_height="0dp"
         android:text="Username"
         android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="@+id/textInputEditText"
+        app:layout_constraintStart_toEndOf="@+id/textInputEditText"
+        app:layout_constraintStart_toStartOf="@+id/textInputEditText2"
         tools:layout_editor_absoluteY="352dp" />
 
     <com.google.android.material.textfield.TextInputEditText
@@ -55,9 +56,18 @@
         android:layout_marginHorizontal="30dp"
         android:backgroundTint="@color/material_dynamic_secondary10"
         android:text="Sign In"
+        android:padding="10dp"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="@+id/textInputEditText2"
         app:layout_constraintStart_toStartOf="@+id/textInputEditText2"
         tools:layout_editor_absoluteY="578dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="658dp"
+        android:layout_height="299dp"
+        app:srcCompat="@drawable/brie"
+        tools:layout_editor_absoluteX="-124dp"
+        tools:layout_editor_absoluteY="69dp"
 
 </androidx.constraintlayout.widget.ConstraintLayout>
