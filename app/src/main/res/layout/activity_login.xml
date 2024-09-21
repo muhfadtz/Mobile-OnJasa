@@ -68,6 +68,20 @@
         android:layout_height="299dp"
         app:srcCompat="@drawable/brie"
         tools:layout_editor_absoluteX="-124dp"
-        tools:layout_editor_absoluteY="69dp"
+        tools:layout_editor_absoluteY="69dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password?"
+        tools:layout_editor_absoluteX="268dp"
+        tools:layout_editor_absoluteY="528dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Haven't an account? Sign Up"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="528dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
