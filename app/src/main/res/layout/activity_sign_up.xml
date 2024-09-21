@@ -5,6 +5,130 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUpActivity">
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:text="Email"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/textInputEditText2"
+        tools:layout_editor_absoluteY="539dp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textInputEditText5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="30dp"
+        tools:layout_editor_absoluteX="22dp"
+        tools:layout_editor_absoluteY="566dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:text="No.Hp"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/textInputEditText2"
+        tools:layout_editor_absoluteY="467dp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textInputEditText4"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="30dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="494dp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textInputEditText3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="30dp"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="421dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="Address"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/textInputEditText2"
+        tools:layout_editor_absoluteY="394dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="55dp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textInputEditText2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="30dp"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="343dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="Password"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/textInputEditText2"
+        tools:layout_editor_absoluteY="316dp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textInputEditText"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="30dp"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="258dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="Username"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@+id/textInputEditText"
+        app:layout_constraintStart_toStartOf="@+id/textInputEditText2"
+        tools:layout_editor_absoluteY="225dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="30dp"
+        android:backgroundTint="@color/material_dynamic_secondary10"
+        android:padding="10dp"
+        android:text="Sign Up"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/textInputEditText2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textInputEditText2"
+        tools:layout_editor_absoluteY="661dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="374dp"
+        android:layout_height="164dp"
+        app:srcCompat="@drawable/brie"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="70dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Already have an account? Sign In"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="611dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
