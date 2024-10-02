@@ -1,6 +1,8 @@
 package com.example.onjasa
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,5 +18,17 @@ class LoginActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        val signUpTextView: TextView = findViewById(R.id.SignUp)
+
+        // Set klik listener untuk berpindah ke LoginActivity
+        signUpTextView.setOnClickListener {
+            val intent = Intent(this, SignUpActivity::class.java)
+            startActivity(intent)
+        }
+        val username = "galungskie"
+        val password = "galung123"
+
+
+
     }
 }
