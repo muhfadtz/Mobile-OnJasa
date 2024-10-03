@@ -31,7 +31,7 @@
         android:layout_height="190sp"
         android:scaleType="centerCrop"
         app:shapeAppearanceOverlay="@style/roundedProfileImage"
-        app:srcCompat="@drawable/ic_iconprofile"
+        android:src="@drawable/profile_test2"
         tools:layout_editor_absoluteX="110dp"
         tools:layout_editor_absoluteY="114dp" />
 
@@ -40,22 +40,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="UK El Besok"
-        android:textSize="23sp"
+        android:textSize="24sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="143dp"
-        tools:layout_editor_absoluteY="320dp" />
+        tools:layout_editor_absoluteX="140dp"
+        tools:layout_editor_absoluteY="319dp" />
+
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="100dp"
-        android:layout_height="35dp"
-        android:backgroundTint="@color/material_dynamic_secondary10"
-        android:padding="2dp"
-        android:text="Edit Profile"
-        android:textSize="15sp"
-        tools:layout_editor_absoluteX="155dp"
-        tools:layout_editor_absoluteY="351dp" />
-
+        android:id="@+id/outlinedButton"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Outlined button"
+        tools:layout_editor_absoluteX="118dp"
+        tools:layout_editor_absoluteY="359dp" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
@@ -71,6 +69,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/bottom_navigation_menu"
         tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        style="@style/TransparentButtonWithOutline"
+        android:layout_width="385dp"
+        android:layout_height="51dp"
+        android:text="My Button"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="430dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
