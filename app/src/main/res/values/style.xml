@@ -12,4 +12,11 @@
         <item name="android:color">@color/transparent</item>
     </style>
 
+    <style name="roundedTextBG">
+        <item name="android:paddingTop">5sp</item>
+        <item name="android:paddingBottom">5sp</item>
+        <item name="android:paddingRight">10sp</item>
+        <item name="android:paddingLeft">10sp</item>
+    </style>
+
 </resources>
