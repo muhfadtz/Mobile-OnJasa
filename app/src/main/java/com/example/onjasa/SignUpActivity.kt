@@ -12,6 +12,7 @@ import androidx.core.view.WindowInsetsCompat
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import android.widget.TextView
 
 class SignUpActivity : AppCompatActivity() {
 
@@ -24,6 +25,16 @@ class SignUpActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_sign_up)
+
+        // Inisialisasi TextView yang berfungsi sebagai link
+        val tvSignIn = findViewById<TextView>(R.id.tvSignIn)
+
+        // Set onClickListener untuk TextView
+        tvSignIn.setOnClickListener {
+            // Membuka LoginActivity
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
 
         // Inisialisasi FirebaseAuth
         auth = FirebaseAuth.getInstance()
