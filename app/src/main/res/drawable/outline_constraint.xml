@@ -11,8 +11,7 @@
     <item>
         <shape android:shape="rectangle">
             <corners android:radius="16dp" />
-            <stroke android:width="2dp" android:color="#000000" /> <!-- Warna outline hitam -->
-            <solid android:color="@android:color/transparent" />
+            <solid android:color="@color/cardbiru" />
         </shape>
     </item>
 </layer-list>
