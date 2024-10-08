@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:foregroundTint="#000000"
+    tools:context=".ProfileActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Profile"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.047" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="52dp"
+        android:layout_height="47dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.047"
+        app:srcCompat="@drawable/ic_pen"
+        app:tint="#000000" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageView2"
+        android:layout_width="190sp"
+        android:layout_height="190sp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/profile_test2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.149"
+        app:shapeAppearanceOverlay="@style/roundedProfileImage" />
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="UK El Besok"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <Button
+        android:id="@+id/filledButton"
+        android:layout_width="119dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="1dp"
+        android:backgroundTint="@color/black"
+        android:paddingTop="3sp"
+        android:paddingBottom="3sp"
+        android:text="Edit Profile"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
+        android:paddingTop="8dp"
+        app:itemIconSize="48dp"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@android:color/transparent"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.991"
+        app:menu="@menu/bottom_navigation_menu" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/filledButton">
+
+        <Button
+            android:id="@+id/btnprefrence"
+            style="@style/TransparentButtonWithOutline"
+            android:layout_width="333dp"
+            android:layout_height="55dp"
+            android:text="Prefrence"
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            app:icon="@drawable/ic_pref"
+            app:iconSize="24sp"
+            app:iconTint="#000000"
+            tools:layout_editor_absoluteX="53dp"
+            tools:layout_editor_absoluteY="389dp" />
+
+
+        <Button
+            android:id="@+id/btnhelp"
+            style="@style/TransparentButtonWithOutline"
+            android:layout_width="333dp"
+            android:layout_height="55dp"
+            android:text="Help"
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            app:icon="@drawable/ic_help"
+            app:iconSize="24sp"
+            app:iconTint="#000000"
+            tools:layout_editor_absoluteX="53dp"
+            tools:layout_editor_absoluteY="444dp" />
+
+        <Button
+            android:id="@+id/btnlogout"
+            style="@style/TransparentButtonWithOutline"
+            android:layout_width="333dp"
+            android:layout_height="55dp"
+            android:text="Logout"
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            app:icon="@drawable/ic_logout"
+            app:iconSize="24sp"
+            app:iconTint="#000000" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
