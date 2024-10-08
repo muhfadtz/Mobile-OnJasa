@@ -13,6 +13,9 @@
 
         <activity android:name=".OrderListActivity" />
         <activity android:name=".GetStartedActivity" />
+        <activity android:name=".OrderACRepairActivity" />
+        <activity android:name=".ACRepairActivity" />
+        <activity android:name=".ProfileActivity" />
 
 
         <activity

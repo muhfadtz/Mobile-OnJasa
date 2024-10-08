@@ -2,11 +2,13 @@ package com.example.onjasa
 
 import android.content.Intent
 import android.os.Bundle
+import android.provider.ContactsContract.Profile
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import android.widget.Button
 import android.widget.ImageView
+import androidx.cardview.widget.CardView
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomeActivity : AppCompatActivity() {
@@ -18,19 +20,6 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        // Inisialisasi FirebaseAuth
-        auth = FirebaseAuth.getInstance()
-
-        // Inisialisasi Button logout
-        btnlogout = findViewById(R.id.btnlogout)
-
-        btnlogout.setOnClickListener {
-            auth.signOut()
-            Intent(this@HomeActivity, LoginActivity::class.java).also { intent ->
-                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                startActivity(intent)
-            }
-        }
 
         val notification: ImageView = findViewById(R.id.notification)
 
@@ -39,6 +28,13 @@ class HomeActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        //AC Repair Handler
+        val acRepair: CardView = findViewById(R.id.ac_repair_card)
+
+        acRepair.setOnClickListener{
+            val intent = Intent(this@HomeActivity, OrderACRepairActivity::class.java)
+            startActivity(intent)
+        }
         // Inisialisasi BottomNavigationView
         val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottom_navigation)
 
@@ -51,8 +47,9 @@ class HomeActivity : AppCompatActivity() {
                 }
                 R.id.activity -> {
                     // Pindah ke OrderListActivity
-                    val intent = Intent(this, OrderListActivity::class.java)
+                    val intent = Intent(this@HomeActivity, OrderListActivity::class.java)
                     startActivity(intent)
+
                     true
                 }
                 R.id.chat -> {
@@ -60,7 +57,9 @@ class HomeActivity : AppCompatActivity() {
                     true
                 }
                 R.id.navigation_profile -> {
-                    // Handle Profile navigation (jika perlu)
+                    val intent = Intent(this@HomeActivity, ProfileActivity::class.java)
+                    startActivity(intent)
+
                     true
                 }
                 else -> false

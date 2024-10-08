@@ -8,8 +8,9 @@
     tools:context=".OrderACRepairActivity">
 
     <ImageView
-        android:layout_width="30sp"
-        android:layout_height="25sp"
+        android:id="@+id/imageViewBack"
+        android:layout_width="35dp"
+        android:layout_height="30dp"
         android:src="@drawable/arrow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/linearLayout3"
@@ -162,7 +163,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnMakeOrder"
         android:layout_width="370dp"
         android:layout_height="75dp"
         android:layout_marginStart="20sp"
