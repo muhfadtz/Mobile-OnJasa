@@ -28,13 +28,38 @@ class HomeActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        //AC Repair Handler
+        // AC Repair Handler
         val acRepair: CardView = findViewById(R.id.ac_repair_card)
-
-        acRepair.setOnClickListener{
+        acRepair.setOnClickListener {
             val intent = Intent(this@HomeActivity, OrderACRepairActivity::class.java)
+            intent.putExtra("service_type", "AC Repair")
             startActivity(intent)
         }
+
+        // AC Installation Handler
+        val acInstallation: CardView = findViewById(R.id.ac_installation_card)
+        acInstallation.setOnClickListener {
+            val intent = Intent(this@HomeActivity, OrderACRepairActivity::class.java)
+            intent.putExtra("service_type", "AC Installation")
+            startActivity(intent)
+        }
+
+        // AC Maintenance Handler
+        val acMaintenance: CardView = findViewById(R.id.ac_maintenance_card)
+        acMaintenance.setOnClickListener {
+            val intent = Intent(this@HomeActivity, OrderACRepairActivity::class.java)
+            intent.putExtra("service_type", "AC Maintenance")
+            startActivity(intent)
+        }
+
+        // AC Wash Handler
+        val acWash: CardView = findViewById(R.id.ac_wash_card)
+        acWash.setOnClickListener {
+            val intent = Intent(this@HomeActivity, OrderACRepairActivity::class.java)
+            intent.putExtra("service_type", "AC Wash")
+            startActivity(intent)
+        }
+
         // Inisialisasi BottomNavigationView
         val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottom_navigation)
 
