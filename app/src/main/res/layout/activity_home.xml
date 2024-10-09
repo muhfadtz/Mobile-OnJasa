@@ -99,7 +99,6 @@
                 android:textColor="@color/black"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-
     <!-- AC Installation Button -->
     <androidx.cardview.widget.CardView
         android:id="@+id/ac_installation_card"
@@ -179,7 +178,6 @@
                 android:textStyle="bold" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-
     <!-- AC Wash Button -->
     <androidx.cardview.widget.CardView
         android:id="@+id/ac_wash_card"

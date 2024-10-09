@@ -8,6 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import androidx.appcompat.app.AlertDialog // Pastikan ini diimpor
+import android.content.DialogInterface
 import com.google.firebase.auth.FirebaseAuth
 
 class ProfileActivity : AppCompatActivity() {
@@ -30,12 +32,28 @@ class ProfileActivity : AppCompatActivity() {
         btnlogout = findViewById(R.id.btnlogout)
 
         btnlogout.setOnClickListener {
-            auth.signOut()
-            Intent(this@ProfileActivity, LoginActivity::class.java).also { intent ->
-                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                startActivity(intent)
+            // Buat AlertDialog untuk konfirmasi logout
+            AlertDialog.Builder(this).apply {
+                setTitle("Konfirmasi Logout")
+                setMessage("Apakah Anda yakin ingin logout?")
+                setPositiveButton("Ya") { dialog, _ ->
+                    // Jika user memilih 'Ya', lakukan logout
+                    auth.signOut()
+                    Intent(this@ProfileActivity, LoginActivity::class.java).also { intent ->
+                        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                        startActivity(intent)
+                    }
+                    dialog.dismiss()
+                }
+                setNegativeButton("Tidak") { dialog, _ ->
+                    // Jika user memilih 'Tidak', tutup dialog
+                    dialog.dismiss()
+                }
+                create()
+                show()
             }
         }
+
         // Inisialisasi BottomNavigationView
         val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottom_navigation)
 
