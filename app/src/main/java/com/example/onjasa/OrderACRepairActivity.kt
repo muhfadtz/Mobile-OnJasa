@@ -41,5 +41,13 @@ class OrderACRepairActivity : AppCompatActivity() {
             startActivity(intent)
             overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
         }
+
+        // Make Order button handling
+        val btnMakeOrder: Button = findViewById(R.id.btnMakeOrder)
+        btnMakeOrder.setOnClickListener {
+            val intent = Intent(this@OrderACRepairActivity, ACRepairActivity::class.java)
+            startActivity(intent)
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+        }
     }
 }
