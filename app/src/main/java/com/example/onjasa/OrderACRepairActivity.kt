@@ -22,24 +22,24 @@ class OrderACRepairActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_order_acrepair)
 
-        // Menerima data dari HomeActivity
+        // Receive data from HomeActivity
         val serviceType = intent.getStringExtra("service_type")
 
-        // Menyesuaikan header dan elemen lain berdasarkan data yang diterima
-        val serviceTitleTextView: TextView = findViewById(R.id.textView5) // Header textView
-        serviceTitleTextView.text = serviceType ?: "Service"  // Jika null, tampilkan "Service" sebagai default
+        // Update the header TextView and ImageView based on the received data
+        val serviceTitleTextView: TextView = findViewById(R.id.textView5)
+        serviceTitleTextView.text = serviceType ?: "Service"  // Default to "Service" if null
 
-        val serviceImageView: ImageView = findViewById(R.id.imageView5) // Gambar header
+        val serviceImageView: ImageView = findViewById(R.id.imageView5)
         val imageResId: Int = when (serviceType) {
-            "AC Repair" -> R.drawable.maintenance_tools // Gambar AC Repair
-            "AC Installation" -> R.drawable.easy_installation // Gambar AC Installation
-            "AC Maintenance" -> R.drawable.ac // Gambar AC Maintenance
-            "AC Wash" -> R.drawable.spray // Gambar AC Wash
-            else -> R.drawable.order_processing // Gambar default jika tidak ada
+            "AC Repair" -> R.drawable.maintenance_tools
+            "AC Installation" -> R.drawable.easy_installation
+            "AC Maintenance" -> R.drawable.ac
+            "AC Wash" -> R.drawable.spray
+            else -> R.drawable.order_processing // Default image
         }
         serviceImageView.setImageResource(imageResId)
 
-        // Back button handling
+        // Handle Back button click
         val btnBack: ImageView = findViewById(R.id.imageViewBack)
         btnBack.setOnClickListener {
             val intent = Intent(this@OrderACRepairActivity, HomeActivity::class.java)
@@ -47,15 +47,14 @@ class OrderACRepairActivity : AppCompatActivity() {
             overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
         }
 
-        // Make Order button handling
+        // Handle Make Order button click
         val btnMakeOrder: Button = findViewById(R.id.btnMakeOrder)
         btnMakeOrder.setOnClickListener {
             val intent = Intent(this@OrderACRepairActivity, ACRepairActivity::class.java)
-            intent.putExtra("header_title", serviceTitleTextView.text.toString())  // Send the header text
-            intent.putExtra("header_image", imageResId)  // Send the image resource ID
+            intent.putExtra("header_title", serviceTitleTextView.text.toString())  // Pass header text
+            intent.putExtra("header_image", imageResId)  // Pass image resource ID
             startActivity(intent)
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
-
     }
 }
