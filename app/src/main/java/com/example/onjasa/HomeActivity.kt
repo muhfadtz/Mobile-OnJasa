@@ -78,7 +78,8 @@ class HomeActivity : AppCompatActivity() {
                     true
                 }
                 R.id.chat -> {
-                    // Handle Chat navigation (jika perlu)
+                    val intent = Intent(this@HomeActivity, MapViewActivity::class.java)
+                    startActivity(intent)
                     true
                 }
                 R.id.navigation_profile -> {
