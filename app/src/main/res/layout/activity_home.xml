@@ -75,6 +75,7 @@
         app:layout_constraintTop_toBottomOf="@id/service_subtitle">
 
         <LinearLayout
+            android:id="@+id/menuACRepair"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
@@ -114,6 +115,7 @@
         app:layout_constraintTop_toBottomOf="@id/service_subtitle">
 
         <LinearLayout
+            android:id="@+id/menuACInstallation"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
@@ -154,6 +156,7 @@
         app:layout_constraintTop_toBottomOf="@id/ac_repair_card">
 
         <LinearLayout
+            android:id="@+id/menuACMaintenance"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
@@ -193,6 +196,7 @@
         app:layout_constraintTop_toBottomOf="@id/ac_installation_card">
 
         <LinearLayout
+            android:id="@+id/menuACWash"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"

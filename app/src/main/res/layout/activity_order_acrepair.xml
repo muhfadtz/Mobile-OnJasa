@@ -11,10 +11,14 @@
 
     <!-- Header (Title and Icon) -->
 
+    <!-- Service Image -->
+
+    <!-- Location Text -->
     <ImageView
         android:id="@+id/imageViewBack"
         android:layout_width="35dp"
         android:layout_height="30dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="44dp"
         android:contentDescription="Back button"
         android:src="@drawable/arrow"
@@ -23,11 +27,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Service Image -->
-
-    <!-- Location Text -->
     <LinearLayout
-        android:id="@+id/linearLayout3"
+        android:id="@+id/layananorder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
@@ -55,14 +56,13 @@
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="300dp"
-        android:layout_height="302dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="277dp"
+        android:layout_height="303dp"
+        android:layout_marginTop="56dp"
         android:contentDescription="Service process image"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.36"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        app:layout_constraintTop_toTopOf="@+id/layananorder"
         app:srcCompat="@drawable/order_processing" />
 
     <TextView

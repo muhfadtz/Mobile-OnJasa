@@ -1,3 +1,4 @@
+// OrderACRepairActivity.kt
 package com.example.onjasa
 
 import android.annotation.SuppressLint
@@ -26,13 +27,14 @@ class OrderACRepairActivity : AppCompatActivity() {
         serviceTitleTextView.text = serviceType ?: "Service"  // Jika null, tampilkan "Service" sebagai default
 
         val serviceImageView: ImageView = findViewById(R.id.imageView5) // Gambar header
-        when (serviceType) {
-            "AC Repair" -> serviceImageView.setImageResource(R.drawable.maintenance_tools) // Gambar AC Repair
-            "AC Installation" -> serviceImageView.setImageResource(R.drawable.easy_installation) // Gambar AC Installation
-            "AC Maintenance" -> serviceImageView.setImageResource(R.drawable.ac) // Gambar AC Maintenance
-            "AC Wash" -> serviceImageView.setImageResource(R.drawable.spray) // Gambar AC Wash
-            else -> serviceImageView.setImageResource(R.drawable.order_processing) // Gambar default jika tidak ada
+        val imageResId: Int = when (serviceType) {
+            "AC Repair" -> R.drawable.maintenance_tools // Gambar AC Repair
+            "AC Installation" -> R.drawable.easy_installation // Gambar AC Installation
+            "AC Maintenance" -> R.drawable.ac // Gambar AC Maintenance
+            "AC Wash" -> R.drawable.spray // Gambar AC Wash
+            else -> R.drawable.order_processing // Gambar default jika tidak ada
         }
+        serviceImageView.setImageResource(imageResId)
 
         // Back button handling
         val btnBack: ImageView = findViewById(R.id.imageViewBack)
@@ -46,6 +48,8 @@ class OrderACRepairActivity : AppCompatActivity() {
         val btnMakeOrder: Button = findViewById(R.id.btnMakeOrder)
         btnMakeOrder.setOnClickListener {
             val intent = Intent(this@OrderACRepairActivity, ACRepairActivity::class.java)
+            intent.putExtra("header_title", serviceTitleTextView.text.toString())  // Send the header text
+            intent.putExtra("header_image", imageResId)  // Send the image resource ID
             startActivity(intent)
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
