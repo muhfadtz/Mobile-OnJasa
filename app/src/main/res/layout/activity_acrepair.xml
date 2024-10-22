@@ -8,45 +8,40 @@
     tools:context=".ACRepairActivity">
 
     <LinearLayout
-        android:id="@+id/linearLayout3"
-        android:layout_width="136dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="16dp"
-        android:gravity="center_horizontal|center_vertical"
+        android:id="@+id/layananorder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/imgheader"
-            android:layout_width="40sp"
-            android:layout_height="40sp"
-            android:layout_marginRight="5sp"
-            app:srcCompat="@drawable/maintenance_tools"
-            tools:layout_editor_absoluteX="38dp"
-            tools:layout_editor_absoluteY="16dp" />
+            android:id="@+id/imageView5"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="Service icon"
+            app:srcCompat="@drawable/maintenance_tools" />
 
         <TextView
-            android:id="@+id/headertitle"
-            android:layout_width="102dp"
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="AC Repair"
             android:textSize="20sp"
             android:textStyle="bold" />
-
     </LinearLayout>
 
     <ImageView
         android:id="@+id/imageView7"
         android:layout_width="162dp"
         android:layout_height="238dp"
-        android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/layananorder"
         app:srcCompat="@drawable/find_location" />
 
     <TextView
